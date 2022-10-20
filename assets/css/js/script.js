@@ -11,77 +11,52 @@ let submitField = document.querySelector("#submit-field");
 let submitButton = document.getElementById("submitButton");
 
 var questions = [
-    {   
-        question: 
-        selection: 
-        answer: 
+    {  
+        question: "How many elements can you apply an 'ID' attribute to?",
+        answers: [
+            {text:"As many as you want", correct: false },
+            {text: "3", correct: false}, 
+            {text: "1", correct: true},
+            {text: "128", correct: false}
+            ],
     },
-    {   
-        question: 
-        selection: 
-        answer: 
-    },
-    {   
-        question: 
-        selection: 
-        answer: 
-    },
-    {   
-        question: 
-        selection: 
-        answer: 
-    },
-    {   
-        question: 
-        selection: 
-        answer: 
-    },
-    {   
-        question: 
-        selection: 
-        answer: 
-    },
-    {   
-        question: 
-        selection: 
-        answer: 
-    },
-    {   
-        question: 
-        selection: 
-        answer: 
-    },
-    {   
-        question: 
-        selection: 
-        answer: 
-    },
-    {   
-        question: 
-        selection: 
-        answer: 
-    },
-    {   
-        question: 
-        selection: 
-        answer: 
-    },
-
+    {  
+        question: "What does DOM stand for?",
+        answers: [
+            {text: "Document Object Model", correct: true },
+            {text: "Display Object Management", correct: false}, 
+            {text: "Digital Ordinance Model", correct: false},
+            {text: "Desktop Oriented Mode", correct: false}
+            ],
+        },
+     {  
+        question: "What is used primarily to add styling to a web page?",
+        answers: [
+            {text:"HTML", correct: false },
+            {text: "CSS", correct: true}, 
+            {text: "Python", correct: false},
+            {text: "React.js", correct: false}
+            ],
+         },
+    {  
+        question: "What HTML tags are JavaScript code wrapped in?",
+        answers: [
+            {text:"div", correct: false },
+            {text: "link", correct: false}, 
+            {text: "head", correct: false},
+            {text: "script", correct: true}
+                ],
+        },
+        {  
+            question: "When is localStorage data cleared?",
+            answers: [
+                {text:"No expiration time", correct: true },
+                {text: "On page reload", correct: false}, 
+                {text: "On browser close", correct: false},
+                {text: "On computer restart", correct: false}
+                    ],
+            },
 ];
 
-  var currentQuestion;
-  var time = questions.length * 15;
-  var timerStart;
-  var highScores = [];
-  var timeInterval;
 
-  function startTimer() {
-    timeInterval = setInterval(function() {
-        timeLeft--;
-        timerEl.textContent = time;
 
-        if (time === 0 || currentQuestion === questions.length) {
-            clearInterval(timeInterval);
-        }
-    }, 1000);
-  }
